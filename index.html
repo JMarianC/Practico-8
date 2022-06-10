@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practico 8</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--FUENTES DE GOOGLE FONT:font-family: 'Quicksand', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <script>
+      alert("Práctico 8: Práctica de JS!! \nBienvenido.")
+    </script>
+</head>
+<body>
+    <!--Prueba de barra-->
+    <header class="encabezado">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg barra1"> <!-- Poner estilos en css, barra expandida en lg-->
+          <div class="container-fluid">
+            <a class="navbar-brand titulo1" href="#">Recetas Simples</a> <!--titulo o logo-->
+            <div class="text-right">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#BarraNav" aria-controls="BarraNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse text-right" id="BarraNav">
+              <ul class="navbar-nav ms-auto flex-nowrap barra2"> <!--Barra 2 - Principal-->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"> <!--borre "active"-->
+                    <i class="bi bi-house-fill"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-pencil-square"></i> Tips</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-bookmark-fill"></i> Más Recetas
+                  </a>
+                  <ul class="dropdown-menu barra3" aria-labelledby="navbarDropdownMenuLink"> <!--Barra 3-Desplegable-->
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right"></i> Postres y Dulces</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right"></i> Carnes</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right"></i> Pastas</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right"></i> Recetas Veganas</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right"></i> Recetas Saludables</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i> Contacto</a>
+                </li>
+              </ul>
+              <!--BOTON PARA CAMBIAR FONDO-->
+              <button type="button" class="btn btn-secondary btn-sm modo_oscuro" onclick="fondoblack()" >Modo Oscuro</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!--CARRUSEL-->
+    <div class="carrusel d-none d-sm-block">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item imagen1 active">
+                <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/12153328/gastronomia-patisserie-destacada.jpg" class="d-block w-100" alt="imagen1">
+                <div class="carousel-caption d-none d-sm-block capa">
+                  <h5>Recetas Simples</h5>
+                  <p>Las mejores recetas para todos los gustos.</p>
+                </div>
+              </div>
+              <div class="carousel-item imagen1">
+                <img src="https://www.cronista.com/files/image/303/303826/5ffe1fb77d08a_600_315!.png?s=e31bd6c44a7a98950cfc42f1e37406f5&d=1632499101" class="d-block w-100" alt="imagen2">
+                <div class="carousel-caption d-none d-sm-block capa">
+                  <h5>Los mejores platos!</h5>
+                  <p>Prepara platos para lucirte en tu casa o en tu local.</p>
+                </div>
+              </div>
+              <div class="carousel-item imagen1">
+                <img src="https://gastronomiaycia.republica.com/wp-content/uploads/2020/03/sal_comida_vegana-680x457.jpg" class="d-block w-100" alt="imagen3">
+                <div class="carousel-caption d-none d-sm-block capa">
+                  <h5>Recetas Veganas</h5>
+                  <p>La mayor variedad de recetas veganass.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <!--TITULO-->
+    
+    <h1 class="titulo2">SCONES!</h1>
+    
+    <!--BARRA CON ENLACES-->
+    <nav class="container-fluid navegador"><hr>
+      <ul class="row paginas">
+        <li class="col-12 col-sm-6 col-md-3 col-3">
+          <a href="https://www.cucinare.tv/2019/08/20/scons-dulces-una-de-las-recetas-clasicas-de-maru-botana/"target="_blank" title="cucinare">
+            <img src="./imagenes/enlaces/cucinare.png" alt="cucinare" class="logo1">
+          </a>
+        </li>
+        <li class="col-12 col-sm-6 col-md-3 col-3">
+          <a href="https://cookpad.com/ar/recetas/114580-scones-de-dona-petrona"target="_blank" title="cookpad" >
+            <img src="./imagenes/enlaces/cookpad.png" alt="cookpad" class="logo1">
+          </a>
+        </li>
+        <li class="col-12 col-sm-6 col-md-3 col-3">
+          <a href="https://www.paulinacocina.net/scones-dulces/24815" target="_blank" title="paulinacocina">
+              <img src="./imagenes/enlaces/paulina.png" alt="paulinacocina" class="logo1">
+          </a>
+        </li>
+        <li class="col-12 col-sm-6 col-md-3 col-3">
+          <a href="https://www.recetasderechupete.com/scones-o-panecillos-ingleses-faciles/13509/"target="_blank" title="rechupete">
+            <img src="./imagenes/enlaces/chupete1.png" alt="recetasderechupete" class="logo1">
+          </a>
+        </li class="col-12 col-sm-12 col-md-6 col-3">
+      </ul>
+    </nav><hr>
+    <!--SECCIÓN CON IMAGEN Y TEXTO-->
+      
+    <h2 class="titulo3">Breve Reseña</h2>
+
+    <section class="imagen">
+      <figure>
+        <img src="https://4.bp.blogspot.com/-VSWcw6a_3tQ/WMGlZqj-ihI/AAAAAAAAH5Q/0gXKqOByRLwdL1J2buu15Fb8B8-qZg2qgCK4B/s1600/sconesingleses-1.jpg" alt="SCONES">
+        <div class="capa">
+          <h3>SCONES!</h3>
+          <p>Los más ricos...<br>¡Probalos!</p>
+        </div>
+      </figure>
+      <aside class="parrafo">
+        <p>Un scone es un panecillo individual de forma redonda, típico de la cocina del Reino Unido y originario de Escocia.</p>
+        <p>Es un alimento muy común en desayunos.
+        Aunque el scone sea tradicionalmente redondo, se comercializa también en forma de triángulos más planos para ahorrar harina.
+        Los scones caseros pueden ser redondos, triangulares o cuadrados.</p>
+        <span>
+          <p>Los scones suelen ser dulces y contienen a menudo uvas pasas, arándanos, queso o dátiles. Existen también versiones saladas y en Escocia como los soda scones y los tattie scones, unos pastelitos de harina de patata fritos.</p>
+          <p>En Escocia, cuando los scones se fríen en vez de hornearlos son llamados griddle scones. La tradición de freír los scones es también muy común en Nueva Zelanda.
+          </p>
+        </span>
+      </aside>
+    </section>
+    <div class="texto2">
+      <p>Los scones suelen ser dulces y contienen a menudo uvas pasas, arándanos, queso o dátiles. Existen también versiones saladas y en Escocia como los soda scones y los tattie scones, unos pastelitos de harina de patata fritos.</p>
+      <p>En Escocia, cuando los scones se fríen en vez de hornearlos son llamados griddle scones.
+      La tradición de freír los scones es también muy común en Nueva Zelanda.
+      </p>
+    </div>
+    <figure class="publicidad">
+      <img src="https://www.derechoenzapatillas.com/wp-content/uploads/2016/10/hamburguesa.jpg" alt="publicidad1">
+      <div class="capa1">
+        <h3>Publicidad</h3>
+        <p>mmmm... Hamburguesitas!!</p>
+      </div>
+    </figure><br>
+  
+    <!--SECCIÓN VIDEO Y TEXTO (LISTA TIPO ul)-->
+    
+    <section class="contenedor">
+      <div class="video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/p9ue-b0aXmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <aside class="caja-texto">
+        <h3 class= "titulo-lista">INGREDIENTES</h3>
+        <ul class="lista">
+          <li><i class="bi bi-pencil-square"></i>- 400 grs. Harina</li>
+          <li><i class="bi bi-pencil-square"></i>- 50 grs. Azucar</li>
+          <li><i class="bi bi-pencil-square"></i>- 15 grs. Polvo de Hornear</li>
+          <li><i class="bi bi-pencil-square"></i>- 90 grs. Manteca</li>
+          <li><i class="bi bi-pencil-square"></i>- 150 grs. Leche</li>
+          <li><i class="bi bi-pencil-square"></i>- 1 Huevos</li>
+          <li><i class="bi bi-pencil-square"></i>- 5 grs. Sal</li>
+          <li><i class="bi bi-pencil-square"></i>- Vainilla a gusto</li>
+        </ul>
+      </aside>
+    </section>
+    
+    <!--SECCIÓN PARRAFO (LISTA TIPO ol)-->
+    <section class="texto4">
+      <h3 class="titulo-lista">PREPARACIÓN</h3>
+      <ol class="lista2">
+        <li>Colocar la harina en un recipiente hondo y agregar la manteca fría.
+        Desarmarla trabajando con la mano. Hacer un arenado y agregar el polvo de hornear, el azúcar y la sal. Mezclar todo bien.</li><br>
+        <li>Hacer un hueco en el centro y poner dentro los huevos y la leche fría de a poco por si no se llegara a necesitar toda.
+        Mezclar con una cuchara de madera hasta que estén bien unidos todos los ingredientes
+        formando una masa que no sea blanda ni consistente.</li><br>
+        <li>Colocarla sobre la mesada y estirar de 1 cm y medio de espesor.</li><br>
+        <li>Cortar los scones con un cortante liso chico.</li><br>
+        <li>Ponerlos sobre una placa enmantecada y pintarlos con huevo.</li><br>
+        <li>Cocinarlos al horno por 15 a 20 minutos.</li>
+      </ol>
+    </section>
+    <!--SECCIÓN MAPA E IMAGENES SOLO PARA CELULAR-->
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39729.83606137689!2d-0.14266005614020863!3d51.51111067128483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondres%2C%20Reino%20Unido!5e0!3m2!1ses-419!2sar!4v1650491183447!5m2!1ses-419!2sar"
+    width="600" height="250" style="border:0;"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align = "middle"></iframe>
+    </div>   
+
+
+    <!--CARDS-->
+    <div class="container text-center mt-5 tarjetas">
+      <div class="row mt-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl- py-3">
+          <div class="card shadow">
+            <img src="imagenes/lasaña.jpg" class="card-img-top" alt="Lasaña">
+            <div class="car-body">
+              <h4>Lasaña</h4><hr>
+              <p>Lasaña original, como la receta de la abuela. Con ingredientes de calidad y en poco tiempo.</p>
+              <a href="https://www.recetasdesbieta.com/lasagna-original/" target="_blank" class="btn btn-sm btn-secondary">Ir a la Receta</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl- py-3">
+          <div class="card shadow">
+            <img src="imagenes/osobuco.jpg" class="card-img-top" alt="Osobuco">
+            <div class="car-body">
+              <h4>Osobuco al Malbec</h4><hr>
+              <p>La receta a continuación llega de Mendoza, la tierra del buen vino. ¡Pon manos a la obra!</p>
+              <a href="https://www.disfrutarosario.com/osobuco-al-malbec-receta/" target="_blank" class="btn btn-sm btn-secondary">Ir a la Receta</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl- py-3">
+          <div class="card shadow">
+            <img src="imagenes/ensalada.jpg" class="card-img-top" alt="Ensalada">
+            <div class="car-body">
+              <h4>Ensalada Vegana!</h4><hr>
+              <p>Una buena ides de ensalada vegana, saludable, fresca y económica. Con muy pocos ingredientes.</p>
+              <a href="https://bio-c-bon.eu/es/recettes_et_conseils/recettes/ensalada-de-quinoa-vegana" target="_blank" class="btn btn-sm btn-secondary">Ir a la Receta</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl- py-3">
+          <div class="card shadow">
+            <img src="imagenes/helado.jpg" class="card-img-top" alt="Helado">
+            <div class="car-body">
+              <h4>Helado de Zanahoria</h4><hr>
+              <p>Los helados se pueden hacer de infinidad de sabores. Quizás hay algunos menos habituales.</p>
+              <a href="https://www.hola.com/cocina/recetas/20210811194439/helado-de-zanahoria/" target="_blank" class="btn btn-sm btn-secondary">Ir a la Receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Redes-->
+    <ul class="redes">
+      <li><a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube w-32 h-32"></i></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+      <li><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a></li>
+    </ul>       
+    <!--SECCIÓN WHATSAPP-->
+    <div class="wsp">
+      <a class="icono" href="https://wa.me/+5492616240552" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+     <!--SECCIÓN DEL FOOTER-->
+    <footer class="final">
+      <div class="contactos">
+        <div class="tit">Contactos</div>
+        <div class="medios">+54 9 2616240552<br>marianocortez8085@gmail.com</div>
+      </div>
+
+      
+      <div class="autor">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="copy()" >Copyright ©</button>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/javascrip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+</body>
+</html>
